@@ -1,18 +1,20 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 
-function Editor() {
+
+function Editor(props) {
     return (
         <div style={styles}>
-            <TextField
+          <TextField
                 id="editor"
                 label="Markdown Editor"
                 multiline
                 fullWidth
-                rows="5"
-                defaultValue="State?"
+                rows="50"
+                defaultValue={props.markdown}
                 variant="outlined"
-            />
+                onChange={props.onChange}
+            /> 
         </div>
     )
 }

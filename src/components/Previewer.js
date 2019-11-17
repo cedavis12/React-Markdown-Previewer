@@ -1,19 +1,10 @@
 import React from 'react';
-import TextField from '@material-ui/core/TextField';
+import marked from 'marked';
 
 
-function Previewer() {
+function Previewer(props) {
     return (
-        <div>
-            <TextField
-                id="previewer"
-                label="Markdown Previewer"
-                multiline
-                fullWidth
-                rows="10"
-                defaultValue="State?"
-                variant="outlined"
-            />
+        <div dangerouslySetInnerHTML = {{__html: marked(props.markdown)}}>
         </div>
     )
 }
