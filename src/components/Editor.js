@@ -3,17 +3,25 @@ import TextField from '@material-ui/core/TextField';
 
 function Editor() {
     return (
-        <div>
+        <div style={styles}>
             <TextField
                 id="editor"
+                label="Markdown Editor"
                 multiline
                 fullWidth
                 rows="5"
-                defaultValue="Markdown Editor"
+                defaultValue="State?"
                 variant="outlined"
             />
         </div>
     )
 }
+
+const styles = {
+    marginTop: '50px',
+    marginBottom: '25px',
+
+}
+
 
 export default Editor;
